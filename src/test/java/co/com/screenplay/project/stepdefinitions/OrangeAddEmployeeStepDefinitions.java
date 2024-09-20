@@ -16,13 +16,13 @@ public class OrangeAddEmployeeStepDefinitions {
         OnStage.setTheStage(new OnlineCast());
     }
 
-    @When("agrega un empleado")
+    @When("agrega toda la información del empleado")
     public void addEmployeeData() {
         theActorInTheSpotlight().attemptsTo(OrangeAddEmployee.addEmployee(new OrangeEmployee()));
     }
 
-    @Then("debería visualizarse que el estado del candidato es contratado")
-    public void deberíaVisualizarseQueElEstadoDelCandidatoEsContratado() {
+    @Then("debería visualizarse que el estado del empleado es contratado")
+    public void verifyHiring() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }

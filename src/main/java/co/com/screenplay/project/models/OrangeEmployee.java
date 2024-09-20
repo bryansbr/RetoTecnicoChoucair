@@ -20,7 +20,7 @@ public class OrangeEmployee {
         this.middleName = "Bruce";
         this.lastName = "Mathers";
         this.vacancy = "Software Engineer";
-        this.email = "marshall.matters@gmail.com";
+        this.email = "marshall.mathers@gmail.com";
         this.contactNumber = "3217895603";
         this.keywords = "Java, API, Rest, SpringBoot";
         this.notes = "I am a Backend Software Engineer with more than 5 years of experience in Java.";

@@ -12,6 +12,6 @@ Característica: Creación de empleado
     Dado que "Bryan" abre el sitio web OrangeHRM
     Cuando ingresa las credenciales correctas
 
-  Esquema del escenario:  Agregar un empleado.
-    Y agrega un empleado
-    Entonces debería visualizarse que el estado del candidato es contratado
+  Escenario:  Agregar un empleado.
+    Y agrega toda la información del empleado
+    Entonces debería visualizarse que el estado del empleado es contratado
