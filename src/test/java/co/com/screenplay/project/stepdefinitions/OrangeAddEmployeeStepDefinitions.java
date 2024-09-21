@@ -1,7 +1,9 @@
 package co.com.screenplay.project.stepdefinitions;
 
 import co.com.screenplay.project.models.OrangeEmployee;
+import co.com.screenplay.project.models.ScheduleInterview;
 import co.com.screenplay.project.task.OrangeAddEmployee;
+import co.com.screenplay.project.task.OrangeScheduleInterview;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -18,7 +20,10 @@ public class OrangeAddEmployeeStepDefinitions {
 
     @When("agrega toda la información del empleado")
     public void addEmployeeData() {
-        theActorInTheSpotlight().attemptsTo(OrangeAddEmployee.addEmployee(new OrangeEmployee()));
+        theActorInTheSpotlight().attemptsTo(
+                OrangeAddEmployee.addEmployee(new OrangeEmployee()),
+                OrangeScheduleInterview.enterScheduleInterviewInfo(new ScheduleInterview())
+        );
     }
 
     @Then("debería visualizarse que el estado del empleado es contratado")

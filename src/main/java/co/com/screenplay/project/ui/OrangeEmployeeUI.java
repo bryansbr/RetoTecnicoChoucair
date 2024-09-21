@@ -18,4 +18,5 @@ public class OrangeEmployeeUI {
     public static final Target CHECK_CONSENT = Target.the("Consent to keep data").locatedBy(".oxd-checkbox-input.oxd-checkbox-input--active");
     public static final Target SAVE_BTN = Target.the("Save button").locatedBy("//button[normalize-space()='Save']");
     public static final Target SHORT_LIST_BTN = Target.the("Shortlist button").locatedBy("//button[normalize-space()='Shortlist']");
+    public static final Target SCHEDULE_INTERVIEW = Target.the("Schedule interview button").locatedBy("//button[normalize-space()='Schedule Interview']");
 }

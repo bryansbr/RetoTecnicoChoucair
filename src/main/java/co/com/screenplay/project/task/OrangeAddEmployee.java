@@ -57,7 +57,8 @@ public class OrangeAddEmployee implements Task {
                 Click.on(SAVE_BTN),
                 Click.on(SHORT_LIST_BTN),
                 Enter.theValue(notes).into(NOTES),
-                Click.on(SAVE_BTN)
+                Click.on(SAVE_BTN),
+                Click.on(SCHEDULE_INTERVIEW)
         );
     }
 
