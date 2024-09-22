@@ -1,5 +1,6 @@
 package co.com.screenplay.project.task;
 
+import co.com.screenplay.project.enums.Buttons;
 import co.com.screenplay.project.models.AddEmployee;
 import co.com.screenplay.project.utils.UploadFiles;
 import co.com.screenplay.project.utils.Files;
@@ -38,7 +39,8 @@ public class OrangeAddEmployee implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 Click.on(RECRUITMENT_OPTION),
-                Click.on(ADD_BTN),
+                Click.on(Buttons.ADD_BTN.getTarget()),
+                //Click.on(ADD_BTN),
                 Enter.theValue(firstName).into(FIRST_NAME),
                 Enter.theValue(middleName).into(MIDDLE_NAME),
                 Enter.theValue(lastName).into(LAST_NAME),
@@ -54,10 +56,11 @@ public class OrangeAddEmployee implements Task {
                 Enter.theValue(keywords).into(INPUTS.of("Keywords", "Enter comma seperated words...")),
                 Enter.theValue(notes).into(NOTES),
                 Click.on(CHECK_CONSENT),
-                Click.on(SAVE_BTN),
-                Click.on(SHORT_LIST_BTN),
-                Click.on(SAVE_BTN),
-                Click.on(SCHEDULE_INTERVIEW)
+                Click.on(Buttons.SAVE_BTN.getTarget()),
+                Click.on(Buttons.SHORTLIST_BTN.getTarget()),
+                Click.on(Buttons.SAVE_BTN.getTarget()),
+                Click.on(Buttons.SCHEDULE_INTERVIEW.getTarget())
+                //Click.on(SCHEDULE_INTERVIEW)
         );
     }
 

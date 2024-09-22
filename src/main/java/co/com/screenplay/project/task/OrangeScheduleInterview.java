@@ -1,5 +1,6 @@
 package co.com.screenplay.project.task;
 
+import co.com.screenplay.project.enums.Buttons;
 import co.com.screenplay.project.interactions.WaitAndClick;
 import co.com.screenplay.project.models.ScheduleInterview;
 import net.serenitybdd.screenplay.Actor;
@@ -36,13 +37,13 @@ public class OrangeScheduleInterview implements Task {
                 Click.on(INTERVIEW_TIME),
                 Enter.theValue(interviewTime).into(INTERVIEW_TIME),
                 Enter.theValue(interviewNotes).into(INTERVIEW_NOTES),
-                Click.on(SAVE_BTN),
-                Click.on(MARK_INTERVIEW_PASSED_BTN),
-                Click.on(SAVE_BTN),
-                Click.on(OFFER_JOB_BTN),
-                Click.on(SAVE_BTN),
-                Click.on(HIRE_BTN),
-                Click.on(SAVE_BTN),
+                Click.on(Buttons.SAVE_BTN.getTarget()),
+                Click.on(Buttons.MARK_INTERVIEW_PASSED_BTN.getTarget()),
+                Click.on(Buttons.SAVE_BTN.getTarget()),
+                Click.on(Buttons.OFFER_JOB_BTN.getTarget()),
+                Click.on(Buttons.SAVE_BTN.getTarget()),
+                Click.on(Buttons.HIRE_BTN.getTarget()),
+                Click.on(Buttons.SAVE_BTN.getTarget()),
                 Click.on(RECRUITMENT_OPTION)
         );
     }

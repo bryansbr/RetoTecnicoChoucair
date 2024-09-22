@@ -6,7 +6,6 @@ public class OrangeAddEmployeePage {
     private OrangeAddEmployeePage() {}
 
     public static final Target RECRUITMENT_OPTION = Target.the("Recruitment option").locatedBy("//li[@class='oxd-main-menu-item-wrapper']//span[text()='Recruitment']");
-    public static final Target ADD_BTN = Target.the("Add button").locatedBy("//button[normalize-space()='Add']");
     public static final Target FIRST_NAME = Target.the("First name").locatedBy("//input[@name='firstName']");
     public static final Target MIDDLE_NAME = Target.the("Middle name").locatedBy("//input[@name='middleName']");
     public static final Target LAST_NAME = Target.the("Last name").locatedBy("//input[@name='lastName']");
@@ -16,7 +15,4 @@ public class OrangeAddEmployeePage {
     public static final Target UPLOAD_FILE = Target.the("Upload file").locatedBy("//input[@type='file']");
     public static final Target NOTES = Target.the("Notes").locatedBy("//textarea[@placeholder='Type here']");
     public static final Target CHECK_CONSENT = Target.the("Consent to keep data").locatedBy(".oxd-checkbox-input.oxd-checkbox-input--active");
-    public static final Target SAVE_BTN = Target.the("Save button").locatedBy("//button[normalize-space()='Save']");
-    public static final Target SHORT_LIST_BTN = Target.the("Shortlist button").locatedBy("//button[normalize-space()='Shortlist']");
-    public static final Target SCHEDULE_INTERVIEW = Target.the("Schedule interview button").locatedBy("//button[normalize-space()='Schedule Interview']");
 }

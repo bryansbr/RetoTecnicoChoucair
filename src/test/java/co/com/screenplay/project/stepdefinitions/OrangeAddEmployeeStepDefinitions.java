@@ -12,6 +12,7 @@ import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+import net.serenitybdd.screenplay.targets.Target;
 import org.hamcrest.Matchers;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -32,13 +33,16 @@ public class OrangeAddEmployeeStepDefinitions {
 
     @Then("debería visualizarse que el estado del empleado es contratado")
     public void verifyHiring() {
-        theActorInTheSpotlight().should(
-                GivenWhenThen.seeThat(
-                        ValidateText.theText(OrangeVerifyHiringPage.JOB_TITLE), Matchers.is(true)),
-                GivenWhenThen.seeThat(
-                        ValidateText.theText(OrangeVerifyHiringPage.EMPLOYEE_NAME), Matchers.is(true)),
-                GivenWhenThen.seeThat(
-                        ValidateText.theText(OrangeVerifyHiringPage.HIRING_STATUS), Matchers.is(true))
-        );
+        Target[] targets = {
+                OrangeVerifyHiringPage.JOB_TITLE,
+                OrangeVerifyHiringPage.EMPLOYEE_NAME,
+                OrangeVerifyHiringPage.HIRING_STATUS
+        };
+
+        for (Target target : targets) {
+            theActorInTheSpotlight().should(
+                    GivenWhenThen.seeThat(ValidateText.theText(target), Matchers.is(true))
+            );
+        }
     }
 }

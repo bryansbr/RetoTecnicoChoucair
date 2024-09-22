@@ -30,34 +30,24 @@ public class OrangeLoginStepDefinitions {
     public void enterValidCredentials() {
         String username = EnvironmentSpecificConfiguration.from(environmentVariables).getProperty(USERNAME);
         String password = EnvironmentSpecificConfiguration.from(environmentVariables).getProperty(PASSWORD);
-        theActorCalled(ACTOR).attemptsTo(
-                OrangeLogin.login(username, password)
-        );
+        theActorCalled(ACTOR).attemptsTo(OrangeLogin.login(username, password));
     }
 
     @Then("debería visualizar el título de la página")
     public void validatePageTitle() {
         theActorInTheSpotlight().should(
-                GivenWhenThen.seeThat(
-                        TheWebPage.title(),
-                        Matchers.containsString(PAGE_TITLE)
-                )
-        );
+                GivenWhenThen.seeThat(TheWebPage.title(), Matchers.containsString(PAGE_TITLE)));
     }
 
     @When("ingresa credenciales inválidas")
     public void enterWrongCredentials() {
         String username = EnvironmentSpecificConfiguration.from(environmentVariables).getProperty(USERNAME);
         String password = EnvironmentSpecificConfiguration.from(environmentVariables).getProperty(INVALID_PASSWORD);
-        theActorCalled(ACTOR).attemptsTo(
-                OrangeLogin.login(username, password)
-        );
+        theActorCalled(ACTOR).attemptsTo(OrangeLogin.login(username, password));
     }
     @Then("debería visualizar un mensaje error")
     public void validateLoginErrorMessage() {
         theActorInTheSpotlight().should(
-                GivenWhenThen.seeThat(
-                        ValidateText.theText(LOGIN_ERROR_MSG), Matchers.is(true)
-                ));
+                GivenWhenThen.seeThat(ValidateText.theText(LOGIN_ERROR_MSG), Matchers.is(true)));
     }
 }
