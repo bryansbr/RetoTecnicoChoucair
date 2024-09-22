@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class OrangeEmployee {
+public class AddEmployee {
     private String firstName;
     private String middleName;
     private String lastName;
@@ -15,7 +15,7 @@ public class OrangeEmployee {
     private String keywords;
     private String notes;
 
-    public OrangeEmployee() {
+    public AddEmployee() {
         /*this.firstName = "Marshall";
         this.middleName = "Bruce";
         this.lastName = "Mathers";

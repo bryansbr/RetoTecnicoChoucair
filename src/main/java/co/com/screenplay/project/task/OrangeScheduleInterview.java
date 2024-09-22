@@ -29,7 +29,7 @@ public class OrangeScheduleInterview implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 Enter.theValue(titleInterview).into(INTERVIEW_TITLE),
-                Enter.theValue("Peter").into(SEARCH_INTERVIEWER),
+                Enter.theValue(interviewer).into(SEARCH_INTERVIEWER),
                 WaitAndClick.inTheField(SELECT_INTERVIEWER, 10),
                 Click.on(INTERVIEW_DATE),
                 Enter.theValue(interviewDate).into(INTERVIEW_DATE),
@@ -37,7 +37,13 @@ public class OrangeScheduleInterview implements Task {
                 Enter.theValue(interviewTime).into(INTERVIEW_TIME),
                 Enter.theValue(interviewNotes).into(INTERVIEW_NOTES),
                 Click.on(SAVE_BTN),
-                Click.on(MARK_INTERVIEW_PASSED_BTN)
+                Click.on(MARK_INTERVIEW_PASSED_BTN),
+                Click.on(SAVE_BTN),
+                Click.on(OFFER_JOB_BTN),
+                Click.on(SAVE_BTN),
+                Click.on(HIRE_BTN),
+                Click.on(SAVE_BTN),
+                Click.on(RECRUITMENT_OPTION)
         );
     }
 

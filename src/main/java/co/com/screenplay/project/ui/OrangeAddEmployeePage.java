@@ -2,8 +2,8 @@ package co.com.screenplay.project.ui;
 
 import net.serenitybdd.screenplay.targets.Target;
 
-public class OrangeEmployeeUI {
-    private OrangeEmployeeUI() {}
+public class OrangeAddEmployeePage {
+    private OrangeAddEmployeePage() {}
 
     public static final Target RECRUITMENT_OPTION = Target.the("Recruitment option").locatedBy("//li[@class='oxd-main-menu-item-wrapper']//span[text()='Recruitment']");
     public static final Target ADD_BTN = Target.the("Add button").locatedBy("//button[normalize-space()='Add']");

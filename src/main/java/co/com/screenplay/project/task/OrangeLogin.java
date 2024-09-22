@@ -8,7 +8,7 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 
-import static co.com.screenplay.project.ui.OrangeLoginUI.*;
+import static co.com.screenplay.project.ui.OrangeLoginPage.*;
 
 @Slf4j
 @AllArgsConstructor

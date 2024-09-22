@@ -13,7 +13,7 @@ import net.serenitybdd.screenplay.questions.page.TheWebPage;
 import net.thucydides.core.util.EnvironmentVariables;
 import org.hamcrest.Matchers;
 
-import static co.com.screenplay.project.ui.OrangeLoginUI.LOGIN_ERROR_MSG;
+import static co.com.screenplay.project.ui.OrangeLoginPage.LOGIN_ERROR_MSG;
 import static co.com.screenplay.project.utils.Constants.*;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -57,7 +57,7 @@ public class OrangeLoginStepDefinitions {
     public void validateLoginErrorMessage() {
         theActorInTheSpotlight().should(
                 GivenWhenThen.seeThat(
-                        ValidateText.validateText(LOGIN_ERROR_MSG), Matchers.is(true)
+                        ValidateText.theText(LOGIN_ERROR_MSG), Matchers.is(true)
                 ));
     }
 }

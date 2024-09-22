@@ -1,6 +1,6 @@
 package co.com.screenplay.project.task;
 
-import co.com.screenplay.project.models.OrangeEmployee;
+import co.com.screenplay.project.models.AddEmployee;
 import co.com.screenplay.project.utils.UploadFiles;
 import co.com.screenplay.project.utils.Files;
 import net.serenitybdd.screenplay.Actor;
@@ -10,7 +10,7 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.targets.Target;
 
-import static co.com.screenplay.project.ui.OrangeEmployeeUI.*;
+import static co.com.screenplay.project.ui.OrangeAddEmployeePage.*;
 
 public class OrangeAddEmployee implements Task {
     private final String firstName;
@@ -22,7 +22,7 @@ public class OrangeAddEmployee implements Task {
     private final String keywords;
     private final String notes;
 
-    public OrangeAddEmployee(OrangeEmployee employee) {
+    public OrangeAddEmployee(AddEmployee employee) {
         super();
         this.firstName = employee.getFirstName();
         this.middleName = employee.getMiddleName();
@@ -56,13 +56,12 @@ public class OrangeAddEmployee implements Task {
                 Click.on(CHECK_CONSENT),
                 Click.on(SAVE_BTN),
                 Click.on(SHORT_LIST_BTN),
-                Enter.theValue(notes).into(NOTES),
                 Click.on(SAVE_BTN),
                 Click.on(SCHEDULE_INTERVIEW)
         );
     }
 
-    public static OrangeAddEmployee addEmployee(OrangeEmployee employee) {
+    public static OrangeAddEmployee addEmployee(AddEmployee employee) {
         return Tasks.instrumented(OrangeAddEmployee.class, employee);
     }
 }
