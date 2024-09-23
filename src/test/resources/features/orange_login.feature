@@ -19,4 +19,4 @@ Característica: Inicio de sesión
   @orangeLoginError
   Escenario: Error en inicio de sesión.
     Cuando ingresa credenciales inválidas
-    Entonces debería visualizar un mensaje error
+    Entonces debería visualizar un mensaje de error

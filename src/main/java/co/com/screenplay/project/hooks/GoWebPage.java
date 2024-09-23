@@ -1,4 +1,4 @@
-package co.com.screenplay.project.hook;
+package co.com.screenplay.project.hooks;
 
 import net.serenitybdd.screenplay.actions.Open;
 import net.thucydides.core.util.EnvironmentVariables;

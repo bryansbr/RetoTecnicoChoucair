@@ -23,7 +23,7 @@ public class ValidateText implements Question<Boolean> {
         return true;
     }
 
-    public static ValidateText validateText(Target target) {
+    public static ValidateText theText(Target target) {
         return new ValidateText(target, WebElementStateMatchers.isVisible());
     }
 }
