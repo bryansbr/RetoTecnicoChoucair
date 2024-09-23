@@ -44,33 +44,25 @@ public class OrangeAddEmployeeStepDefinitions {
 
     @Then("debería visualizarse que el estado del empleado es contratado")
     public void verifyHiring() {
-        //FORMA 1
-        /*Target[] targets = {
-                OrangeVerifyHiringPage.JOB_TITLE,
-                OrangeVerifyHiringPage.EMPLOYEE_NAME,
-                OrangeVerifyHiringPage.HIRING_STATUS
-        };
+        List<Employee> employees = Employee.createEmployees();
 
-        for (Target target : targets) {
+        for (Employee employee : employees) {
             theActorInTheSpotlight().should(
-                    GivenWhenThen.seeThat(ValidateText.theText(target), Matchers.is(true))
+                    GivenWhenThen.seeThat(
+                            ValidateText.theText(OrangeVerifyHiringPage.jobTitle(employee.getVacancy())),
+                            Matchers.is(true)
+                    ),
+                    GivenWhenThen.seeThat(
+                            ValidateText.theText(OrangeVerifyHiringPage.employeeFullName(
+                                    employee.getFirstName() + " " + employee.getMiddleName() + " " + employee.getLastName()
+                            )),
+                            Matchers.is(true)
+                    ),
+                    GivenWhenThen.seeThat(
+                            ValidateText.theText(OrangeVerifyHiringPage.hiringStatus("Hired")),
+                            Matchers.is(true)
+                    )
             );
-        }*/
-
-        // FORMA 2
-        theActorInTheSpotlight().should(
-                GivenWhenThen.seeThat(
-                        ValidateText.theText(OrangeVerifyHiringPage.jobTitle("Payroll Administrator")),
-                        Matchers.is(true)
-                ),
-                GivenWhenThen.seeThat(
-                        ValidateText.theText(OrangeVerifyHiringPage.employeeFullName("Marshall Bruce Mathers")),
-                        Matchers.is(true)
-                ),
-                GivenWhenThen.seeThat(
-                        ValidateText.theText(OrangeVerifyHiringPage.hiringStatus("Hired")),
-                        Matchers.is(true)
-                )
-        );
+        }
     }
 }

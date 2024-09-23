@@ -21,4 +21,3 @@ public class OrangeVerifyHiringPage {
         return createTarget("Hiring status", hiringStatus);
     }
 }
-

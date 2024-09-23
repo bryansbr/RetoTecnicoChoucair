@@ -22,14 +22,14 @@ public class Employee {
         List<Employee> employees = new ArrayList<>();
 
         employees.add(new Employee(
-                "Marshall",
-                "Bruce",
-                "Mathers",
+                "Beatriz",
+                "Aurora",
+                "Pinzon Solano",
                 "Payroll Administrator",
-                "marshall.mathers@gmail.com",
-                "3217895603",
-                "Industrial Engineer, Administrator, Payroll",
-                "Payroll administrator, with more than 5 years of experience in several companies."
+                "beatriz.pinzon@aol.com",
+                "7850253",
+                "Master's Degree in Economics, Economist, Payroll Administrator",
+                "Master in Economics with 3 years of experience in the stock market."
         ));
 
         return employees;

@@ -20,10 +20,10 @@ public class ScheduleInterview {
 
         interviewInfo.add(new ScheduleInterview(
                 "Hiring Interview",
-                "manda akhil user",
-                "2024-23-09",
+                "thien akhil user",
+                "2024-24-09",
                 "10:00 AM",
-                "Marshall hiring interview"
+                "Interview for the position of Payroll Administrator"
         ));
 
         return interviewInfo;

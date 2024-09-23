@@ -45,7 +45,7 @@ public class OrangeLoginStepDefinitions {
         String password = EnvironmentSpecificConfiguration.from(environmentVariables).getProperty(INVALID_PASSWORD);
         theActorCalled(ACTOR).attemptsTo(OrangeLogin.login(username, password));
     }
-    @Then("debería visualizar un mensaje error")
+    @Then("debería visualizar un mensaje de error")
     public void validateLoginErrorMessage() {
         theActorInTheSpotlight().should(
                 GivenWhenThen.seeThat(ValidateText.theText(LOGIN_ERROR_MSG), Matchers.is(true)));
