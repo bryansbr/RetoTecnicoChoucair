@@ -12,31 +12,23 @@ import net.serenitybdd.screenplay.actions.Enter;
 import static co.com.screenplay.project.ui.OrangeScheduleInterviewPage.*;
 
 public class OrangeScheduleInterview implements Task {
-    private final String titleInterview;
-    private final String interviewer;
-    private final String interviewDate;
-    private final String interviewTime;
-    private final String interviewNotes;
+    private final ScheduleInterview scheduleInterviewInfo;
 
-    public OrangeScheduleInterview(ScheduleInterview interviewInfo) {
-        super();
-        this.titleInterview = interviewInfo.getTitleInterview();
-        this.interviewer = interviewInfo.getInterviewer();
-        this.interviewDate = interviewInfo.getInterviewDate();
-        this.interviewTime = interviewInfo.getInterviewTime();
-        this.interviewNotes = interviewInfo.getInterviewNotes();
+    public OrangeScheduleInterview(ScheduleInterview scheduleInterviewInfo) {
+        this.scheduleInterviewInfo = scheduleInterviewInfo;
     }
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Enter.theValue(titleInterview).into(INTERVIEW_TITLE),
-                Enter.theValue(interviewer).into(SEARCH_INTERVIEWER),
+                Enter.theValue(scheduleInterviewInfo.getInterviewTitle()).into(INTERVIEW_TITLE),
+                Enter.theValue(scheduleInterviewInfo.getInterviewer()).into(SEARCH_INTERVIEWER),
                 WaitAndClick.inTheField(SELECT_INTERVIEWER, 10),
                 Click.on(INTERVIEW_DATE),
-                Enter.theValue(interviewDate).into(INTERVIEW_DATE),
+                Enter.theValue(scheduleInterviewInfo.getInterviewDate()).into(INTERVIEW_DATE),
                 Click.on(INTERVIEW_TIME),
-                Enter.theValue(interviewTime).into(INTERVIEW_TIME),
-                Enter.theValue(interviewNotes).into(INTERVIEW_NOTES),
+                Enter.theValue(scheduleInterviewInfo.getInterviewTime()).into(INTERVIEW_TIME),
+                Enter.theValue(scheduleInterviewInfo.getInterviewNotes()).into(INTERVIEW_NOTES),
                 Click.on(Buttons.SAVE_BTN.getTarget()),
                 Click.on(Buttons.MARK_INTERVIEW_PASSED_BTN.getTarget()),
                 Click.on(Buttons.SAVE_BTN.getTarget()),

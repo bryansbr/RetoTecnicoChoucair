@@ -5,7 +5,20 @@ import net.serenitybdd.screenplay.targets.Target;
 public class OrangeVerifyHiringPage {
     private OrangeVerifyHiringPage() {}
 
-    public static final Target JOB_TITLE = Target.the("Job title").locatedBy("//div[text()='Payroll Administrator']");
-    public static final Target EMPLOYEE_NAME = Target.the("Employee name").locatedBy("//div[text()='James David Rodriguez Rubio']");
-    public static final Target HIRING_STATUS = Target.the("Hiring status").locatedBy("//div[text()='Hired']");
+    private static Target createTarget(String description, String value) {
+        return Target.the(description).locatedBy("//div[text()='" + value + "']");
+    }
+
+    public static Target jobTitle(String jobTitle) {
+        return createTarget("Job title", jobTitle);
+    }
+
+    public static Target employeeFullName(String employeeFullName) {
+        return createTarget("Employee full name", employeeFullName);
+    }
+
+    public static Target hiringStatus(String hiringStatus) {
+        return createTarget("Hiring status", hiringStatus);
+    }
 }
+
