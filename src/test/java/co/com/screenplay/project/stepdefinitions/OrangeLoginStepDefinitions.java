@@ -1,7 +1,7 @@
 package co.com.screenplay.project.stepdefinitions;
 
 import co.com.screenplay.project.questions.ValidateText;
-import co.com.screenplay.project.task.OrangeLogin;
+import co.com.screenplay.project.tasks.OrangeLogin;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;

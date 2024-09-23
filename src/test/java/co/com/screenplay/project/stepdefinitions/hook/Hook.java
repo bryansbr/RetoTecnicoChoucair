@@ -1,6 +1,6 @@
 package co.com.screenplay.project.stepdefinitions.hook;
 
-import co.com.screenplay.project.hook.GoWebPage;
+import co.com.screenplay.project.hooks.GoWebPage;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import net.serenitybdd.screenplay.GivenWhenThen;

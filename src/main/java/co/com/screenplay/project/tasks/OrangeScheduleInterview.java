@@ -1,4 +1,4 @@
-package co.com.screenplay.project.task;
+package co.com.screenplay.project.tasks;
 
 import co.com.screenplay.project.enums.Buttons;
 import co.com.screenplay.project.interactions.WaitAndClick;

@@ -1,4 +1,4 @@
-package co.com.screenplay.project.task;
+package co.com.screenplay.project.tasks;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
